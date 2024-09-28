@@ -1,0 +1,243 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Header styles */
+header {
+    background: #007bff;
+    color: white;
+    padding: 40px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d1ecf1;
+}
+
+/* Section styles */
+/* General section styling */
+section {
+    padding: 60px 0;  /* Increased padding for more spacing */
+    margin-bottom: 50px;
+    background-color: #ffffff;  /* White background for sections */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  /* Softer shadow for better elevation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;  /* To hide any overflow from background effects */
+}
+
+section:hover {
+    transform: translateY(-5px);  /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  /* Enhanced shadow on hover */
+}
+
+/* Section headings */
+section h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #007bff;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;  /* Uppercase for a stronger heading presence */
+    letter-spacing: 1px;  /* Slight letter spacing for modern feel */
+}
+
+/* Section content */
+section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 30px auto;  /* Center text and add bottom margin */
+    color: #666;
+    text-align: center;
+    line-height: 1.8;  /* Increased line height for better readability */
+    position: relative;
+    z-index: 2;
+}
+
+/* Background decorations for sections */
+section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -150px;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 123, 255, 0.2);
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -150px;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Hover effects for background decorations */
+section:hover::before, 
+section:hover::after {
+    transform: scale(1.2);  /* Animate circles on hover */
+    background: rgba(0, 123, 255, 0.3);  /* Make background circles more prominent */
+}
+
+/* Centered content for all sections */
+section .container {
+    text-align: center;
+}
+
+/* List styling */
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #333;
+    display: inline-block;
+    background-color: #f1f4f9;  /* Soft background for list items */
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+section ul li:hover {
+    background-color: #007bff;  /* Blue background on hover */
+    color: #fff;
+}
+
+
+/* IoT Dashboard styles */
+.iot-dashboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.iot-dashboard h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.iot-dashboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.iot-dashboard li {
+    font-size: 1.1em;
+    padding: 10px;
+    background: #f1f4f9;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iot-dashboard li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.iot-dashboard span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Footer styles */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1em;
+    margin: 5px;
+}
+
+footer section h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+footer section p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .iot-dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
